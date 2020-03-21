@@ -1,0 +1,244 @@
+<!-- udacimak v1.4.4 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Problem 3: Huffman Coding</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/plyr.css">
+  <link rel="stylesheet" href="../assets/css/katex.min.css">
+  <link rel="stylesheet" href="../assets/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="../assets/img/udacimak.png" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar">
+  <div class="sidebar-header">
+    <h3>Show Me the Data Structures</h3>
+  </div>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled components">
+    <li class="">
+      <a href="01. Introduction to the Project.html">01. Introduction to the Project</a>
+    </li>
+    <li class="">
+      <a href="02. Problem 1 LRU Cache.html">02. Problem 1: LRU Cache</a>
+    </li>
+    <li class="">
+      <a href="03. Problem 2 File Recursion.html">03. Problem 2: File Recursion</a>
+    </li>
+    <li class="">
+      <a href="04. Problem 3 Huffman Coding.html">04. Problem 3: Huffman Coding</a>
+    </li>
+    <li class="">
+      <a href="05. Problem 4 Active Directory.html">05. Problem 4: Active Directory</a>
+    </li>
+    <li class="">
+      <a href="06. Problem 5 Blockchain.html">06. Problem 5: Blockchain</a>
+    </li>
+    <li class="">
+      <a href="07. Problem 6 Union and Intersection.html">07. Problem 6: Union and Intersection</a>
+    </li>
+    <li class="">
+      <a href="Project Description - Show Me the Data Structures.html">Project Description - Show Me the Data Structures</a>
+    </li>
+    <li class="">
+      <a href="Project Rubric - Show Me the Data Structures.html">Project Rubric - Show Me the Data Structures</a>
+    </li>
+  </ul>
+
+  <ul class="sidebar-list list-unstyled CTAs">
+    <li>
+      <a href="../index.html" class="article">Back to Home</a>
+    </li>
+  </ul>
+</nav>
+
+    <div id="content">
+      <header class="container-fluild header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="align-items-middle">
+                <button type="button" id="sidebarCollapse" class="btn btn-toggle-sidebar">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </button>
+
+                <h1 style="display: inline-block">04. Problem 3: Huffman Coding</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h1 id="huffman-coding">Huffman Coding</h1>
+<p>A <strong>Huffman code</strong> is a type of optimal prefix code that is used for compressing data. The Huffman encoding and decoding schema is also lossless, meaning that when compressing the data to make it smaller, there is no loss of information.</p>
+<p>The Huffman algorithm works by assigning codes that correspond to the relative frequency of each character for each character. The Huffman code can be of any length and does not require a prefix; therefore, this binary code can be visualized on a binary tree with each encoded character being stored on leafs.</p>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <p>There are many types of pseudocode for this algorithm. At the basic core, it is comprised of building a Huffman tree, encoding the data, and, lastly, decoding the data. </p>
+<p>Here is one type of pseudocode for this coding schema:</p>
+<ul>
+<li>Take a string and determine the relevant frequencies of the characters.</li>
+<li>Build and sort a list of tuples from lowest to highest frequencies. </li>
+<li>Build the Huffman Tree by assigning a binary code to each letter, using shorter codes for the more frequent letters. (This is the heart of the Huffman algorithm.)</li>
+<li>Trim the Huffman Tree (remove the frequencies from the previously built tree).</li>
+<li>Encode the text into its compressed form.</li>
+<li>Decode the text from its compressed form.</li>
+</ul>
+<p>You then will need to create encoding, decoding, and sizing schemas. </p>
+<p>For Example:</p>
+<pre><code>import sys
+
+def huffman_encoding(data):
+    pass
+
+def huffman_decoding(data,tree):
+    pass
+
+if __name__ == "__main__":
+    codes = {}
+
+    a_great_sentence = "The bird is the word"
+
+    print ("The size of the data is: {}\n".format(sys.getsizeof(a_great_sentence)))
+    print ("The content of the data is: {}\n".format(a_great_sentence))
+
+    encoded_data, tree = huffman_encoding(a_great_sentence)
+
+    print ("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
+    print ("The content of the encoded data is: {}\n".format(encoded_data))
+
+    decoded_data = huffman_decoding(encoded_data, tree)
+
+    print ("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
+    print ("The content of the encoded data is: {}\n".format(decoded_data))</code></pre>
+</div>
+
+</div>
+<div class="divider"></div><div class="ud-atom">
+  <h3></h3>
+  <div>
+  <h2 id="-resources"># Resources</h2>
+<p><a href="https://people.ok.ubc.ca/ylucet/DS/Huffman.html" target="_blank">Huffman Visualization!</a></p>
+<p><a href="http://huffman.ooz.ie" target="_blank">Tree Generator</a></p>
+<p><a href="https://www.siggraph.org/education/materials/HyperGraph/video/mpeg/mpegfaq/huffman_tutorial.html" target="_blank">Additional Explanation</a></p>
+</div>
+
+</div>
+<div class="divider"></div>
+          </div>
+
+          <div class="col-12">
+            <p class="text-right">
+              <a href="05. Problem 4 Active Directory.html" class="btn btn-outline-primary mt-4" role="button">Next Concept</a>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-center">
+                <a href="https://github.com/udacimak/udacimak#readme" target="_blank">udacimak v1.4.4</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <script src="../assets/js/jquery-3.3.1.min.js"></script>
+  <script src="../assets/js/plyr.polyfilled.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../assets/js/katex.min.js"></script>
+  <script>
+    // Initialize Plyr video players
+    const players = Array.from(document.querySelectorAll('video')).map(p => new Plyr(p));
+
+    // render math equations
+    let elMath = document.getElementsByClassName('mathquill');
+    for (let i = 0, len = elMath.length; i < len; i += 1) {
+      const el = elMath[i];
+
+      katex.render(el.textContent, el, {
+        throwOnError: false
+      });
+    }
+
+    // this hack will make sure Bootstrap tabs work when using Handlebars
+    if ($('#question-tabs').length && $('#user-answer-tabs').length) {
+      $("#question-tabs a.nav-link").on('click', function () {
+        $("#question-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+      $("#user-answer-tabs a.nav-link").on('click', function () {
+        $("#user-answer-tab-contents .tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    } else {
+      $("a.nav-link").on('click', function () {
+        $(".tab-pane").hide();
+        $($(this).attr("href")).show();
+      });
+    }
+
+    // side bar events
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar, #content').toggleClass('active');
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+
+      // scroll to first video on page loading
+      if ($('video').length) {
+        $('html,body').animate({ scrollTop: $('div.plyr').prev().offset().top});
+      }
+
+      // auto play first video: this may not work with chrome/safari due to autoplay policy
+      if (players && players.length > 0) {
+        players[0].play();
+      }
+
+      // scroll sidebar to current concept
+      const currentInSideBar = $( "ul.sidebar-list.components li a:contains('04. Problem 3: Huffman Coding')" )
+      currentInSideBar.css( "text-decoration", "underline" );
+      $("#sidebar").mCustomScrollbar('scrollTo', currentInSideBar);
+    });
+  </script>
+</body>
+
+</html>
